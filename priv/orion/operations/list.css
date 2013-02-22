@@ -1,0 +1,13 @@
+@import "../css/layout.css";
+
+@import "../css/ide.css";
+
+@import "../css/images.css";
+
+#tasks-list{
+	padding: 10px;
+}
+
+th {
+	text-align: left;
+}

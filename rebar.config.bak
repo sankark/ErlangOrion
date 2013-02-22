@@ -1,0 +1,32 @@
+{cover_enabled, true}.
+{deps, [
+	{cowboy, ".*",
+		{git, "git://github.com/extend/cowboy.git", "master"}},
+%	{bullet, "0\.2\.0",
+%		{git, "git://github.com/extend/bullet.git", "0.2.0"}},
+%	{sheriff, "0\.4\.0",
+%		{git, "git://github.com/extend/sheriff.git", "0.4.0"}},
+	{erlydtl, ".*",
+		{git, "https://github.com/evanmiller/erlydtl.git", "master"}},
+	{jsx, ".*",
+		{git, "git://github.com/talentdeficit/jsx.git", "master"}},
+	{gproc, ".*",
+		{git, "git://github.com/esl/gproc.git", "master"}},
+	{lager, ".*",
+		{git, "https://github.com/basho/lager.git", "master"}},
+	{riakc, ".*",
+		{git, "https://github.com/basho/riak-erlang-client.git", "master"}},
+	{dh_date, ".*",
+		{git, "https://github.com/daleharvey/dh_date.git", "master"}},
+	{mimetypes, ".*",
+		{git, "git://github.com/spawngrid/mimetypes.git", "master"}},
+	{uuid, ".*",
+		{git, "git://github.com/avtobiff/erlang-uuid.git", "master"}}
+]}.
+{eunit_opts, [verbose, {report, {eunit_surefire, [{dir, "."}]}}]}.
+
+{post_hooks, [
+	{'get-deps', "./priv/bin/deps.sh get"},
+	%% @todo update
+	{'delete-deps', "./priv/bin/deps.sh delete"}
+]}.

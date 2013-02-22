@@ -1,0 +1,17 @@
+{application, orion, [
+	{description, "REST-based web development environment."},
+	{vsn, "0.1.0"},
+	{modules, []},
+	{registered, [orion_sup]},
+	{applications, [
+		kernel,
+		stdlib,
+		crypto,
+		public_key,
+		ssl,
+		ranch,
+		cowboy
+	]},
+	{mod, {orion_app, []}},
+	{env, []}
+]}.
